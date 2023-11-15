@@ -1,0 +1,6 @@
+/**
+ * ng-oo-mouseover - v3.0.0 - 2014-11-05
+ *
+ * Copyright (c) 2014 Oodrive
+ */
+!function(a){!function(){function b(a,b){return a.length?f.addClass(a,b):null}function c(a,b){return a.length?f.removeClass(a,b):null}function d(){if(!g){g=!0;var a="["+i+"] *",d="["+i+"]";$("body").on("mouseover",a,function(a){var c=$(this),f=c.parents(d);b(c.removeClass("oo-mouseleaving").filter(d+":not(."+h+")"),h),b(f.removeClass("oo-mouseleaving").filter(d+":not(."+h+")"),h),e.$digest(),a.stopPropagation()}).on("mouseout",a,function(){var a=$(this);a=$($.merge($.merge([],a.filter("."+h+","+d)),a.parents("."+h+","+d))),a.addClass("oo-mouseleaving",a),setTimeout(function(){var b=a.filter(".oo-mouseleaving");b.length&&(c(b,h).then(function(){b.removeClass("oo-mouseleaving")}),e.$digest())},1)})}}var e,f=null,g=!1,h="",i="";a.module("oo.mouseover",[]).provider("$mouseover",function(){this.mouseoverCls=function(b){return a.isDefined(b)?void(h=b):h},this.mouseoverAttr=function(b){return a.isDefined(b)?void(i=b):i},this.$get=function(){return{}}}).run(["$rootScope","$animate",function(a,b){e=a,f=b,d()}])}()}(angular);

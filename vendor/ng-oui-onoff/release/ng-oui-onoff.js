@@ -1,0 +1,6 @@
+/**
+ * ng-oui-onoff - v3.0.0 - 2014-11-05
+ *
+ * Copyright (c) 2014 Oodrive
+ */
+!function(a){!function(){a.module("oui.onoff",["oui-templates-onoff","oo.i18n","oui.form.misc"]).directive("ouiOnoff",function(){return{restrict:"AE",scope:{label:"@",name:"@",model:"=?ouiOnoff",ngDisabled:"=?",ngReadonly:"=?"},controller:["$scope","$element",function(a,b){b.mousedown(function(){a.ngDisabled||a.ngReadonly||$(".oo-image",b).addClass("oo-no-outline")}),setTimeout(function(){$(".oo-image",b).blur(function(){$(this).removeClass("oo-no-outline")})},1),b.click(function(){a.ngDisabled||a.ngReadonly||a.$apply(function(){a.model=!a.model})}),a.onKeyDown=function(b){a.ngDisabled||a.ngReadonly||32!==b.keyCode||(a.model=!a.model)}}],templateUrl:"oui-onoff/formOnoff.tpl.html",replace:!0}})}(),function(a){a.module("oui-templates-onoff",["oui-onoff/formOnoff.tpl.html"]),a.module("oui-onoff/formOnoff.tpl.html",[]).run(["$templateCache",function(a){a.put("oui-onoff/formOnoff.tpl.html",'<div class="oo-form-onoff" ng-class="{\'oo-checked\':model,\'oo-disabled\':ngDisabled,\'oo-readonly\':ngReadonly}">\n	<div class="oo-image" oui-tabindex=\'ngDisabled || ngReadonly ? null : 0\' ng-keydown="onKeyDown($event)"></div>\n	<div class="oo-label">{{label | i18nOrText}}</div>\n	<input type="hidden" ng-model="model" name="{{name}}" ng-disabled="ngDisabled">\n</div>')}])}(a)}(angular);

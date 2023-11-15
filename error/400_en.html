@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Opalexe</title>
+
+		<base href="/">
+
+		
+		<link rel="stylesheet" type="text/css" href="resources/opalexe-front-classic.css?v=2.15.19" />
+		
+
+		
+	</head>
+	<body class="oo-static-error-page">
+		<div class="oo-simple" style="width:100%; height: 100%;">
+			<div class="oo-simple-opacity">
+				<div class="oo-simple-poweredby"></div>
+				<div class="oo-simple-footer"></div>
+			</div>
+		</div>
+		<div class="oo-modal-message-mask"></div>
+		<div id="modalWrapper" class="oo-modal-message-wrapper oui-show oo-modal-message-static-400 oo-has-actions"
+			><div id="modal" class="oo-modal-message">
+				<div class="oo-close-action">
+					<i class="icon-close"></i>
+				</div>
+				<div class="oo-modal-message-inner">
+					<i class="oo-icon icon-exclamation2"></i>
+					<div id="modalContent" class="oo-modal-message-content">
+						<div id="modalContentTextWrapper" class="oo-modal-message-text-wrapper">
+							<div class="oo-modal-message-text">
+								<h3 class="oo-title">Bad Request</h3>
+								
+							</div>
+						</div>
+						<div id="modalActions" class="oo-actions"><a id="homeLink" href=""><button class="oo-form-button greyscale">Home</button></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+				var homeUrl = (function (location/*, code*/) {
+			return location.pathname.match(/^\/opalexe\/ws\/[^\/]*\//) ? location.pathname.replace(/^(\/opalexe\/ws\/[^\/]*\/).*$/, '$1') : null;
+		})(window.location, '/', '400');
+				if (!homeUrl) {
+					document.getElementById("modalWrapper").className = document.getElementById("modalWrapper").className.replace(/oo-has-actions/g, '');
+				} else {
+					homeUrl = homeUrl === true ? '/' : homeUrl;
+					document.getElementById("homeLink").href = homeUrl;
+				}
+			
+
+			function getStyle(oElm, strCssRule){
+				var strValue = "";
+				if (document.defaultView && document.defaultView.getComputedStyle) {
+					strValue = document.defaultView.getComputedStyle(oElm, "").getPropertyValue(strCssRule);
+				} else if (oElm.currentStyle){
+					strCssRule = strCssRule.replace(/\-(\w)/g, function (strMatch, p1){
+						return p1.toUpperCase();
+					});
+					strValue = oElm.currentStyle[strCssRule];
+				}
+				return strValue;
+			}
+
+			var modalContentTextWrapper = document.getElementById("modalContentTextWrapper"),
+				modal = document.getElementById("modal"),
+				modalActions = document.getElementById("modalActions"),
+				modalContent = document.getElementById("modalContent"),
+				heightPx
+				;
+			heightPx = modal.offsetHeight - (parseInt(getStyle(modalContent, "padding-top")) + parseInt(getStyle(modalContent, "padding-bottom"))) - (!modalActions ? 0 : modalActions.offsetHeight);
+			modalContentTextWrapper.style.height = (heightPx / parseInt(getStyle(document.getElementById("modalContentTextWrapper"), "font-size")))+"em";
+		</script>
+	</body>
+</html>

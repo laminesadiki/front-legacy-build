@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Opalexe</title>
+
+		
+
+		
+			<script type="text/javascript">
+				var APP_REMOTE_CONFIG;
+				function initAppConfig(config) {
+					APP_REMOTE_CONFIG = config;
+				}
+				
+					
+						var getAppConfigUrl = function(apiRoot) {
+							return apiRoot+'/app-config?_='+new Date().getTime()+'&callback=initAppConfig';
+						};
+					
+					document.write('<script src="'+getAppConfigUrl('https://api.dev.opalexe.fr/rest'.match(/^\./) ? (window.location.pathname||'/').replace(/\/[^/]*$/, '/') + ('https://api.dev.opalexe.fr/rest'.length > 1 ? 'https://api.dev.opalexe.fr/rest'.substring(2) : '') : 'https://api.dev.opalexe.fr/rest', window.location)+'" ></' + 'script>');
+				
+			</script>
+		
+
+		
+		
+		<link rel="stylesheet" type="text/css" href="vendor/jquery-ui/themes/base/minified/jquery.ui.core.min.css?v=1.10.3-20231004160811" />
+		
+		<link rel="stylesheet" type="text/css" href="vendor/jquery-ui/themes/base/minified/jquery.ui.theme.min.css?v=1.10.3-20231004160811" />
+		
+		<link rel="stylesheet" type="text/css" href="vendor/jquery-ui/themes/base/minified/jquery.ui.datepicker.min.css?v=1.10.3-20231004160811" />
+		
+		<link rel="stylesheet" type="text/css" href="vendor/ng-tiny-scrollbar/dist/ng-tiny-scrollbar.min.css?v=0.7.3-20231004160811" />
+		
+
+		
+		<link rel="stylesheet" type="text/css" href="resources/opalexe-front-classic.css?v=2.15.19" />
+		
+
+		
+
+		<link rel="shortcut icon" href="resources/images/favico.ico">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+	<body>
+		
+
+		<div style="height:100%" ng-include="'app/app.tpl.html'"></div>
+
+		
+		
+		<script type="text/javascript" src="vendor/traceur/bin/traceur-runtime.js?v=2.15.19-20141105194600"></script>
+		
+		<script type="text/javascript" src="vendor/almond/almond.js?v=2.15.19-20160901060546"></script>
+		
+		<script type="text/javascript" src="vendor/jquery/jquery.js?v=1.10.2-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/angular/angular.js?v=1.3.13-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/html5-placeholder-polyfill/libs/jquery.ba-resize.min.js?v=2.0.8-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/html5-placeholder-polyfill/libs/jquery.onfontresize.min.js?v=2.0.8-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/html5-placeholder-polyfill/libs/rAF.min.js?v=2.0.8-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/html5-placeholder-polyfill/src/placeholder_polyfill.jquery.js?v=2.0.8-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/angular-sanitize/angular-sanitize.js?v=1.3.13-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/jquery-ui/ui/minified/jquery.ui.core.min.js?v=1.10.3-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/jquery-ui/ui/minified/jquery.ui.datepicker.min.js?v=1.10.3-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/angular-dateParser/dateparser.js?v=1.2.0-RC1-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/angular-animate/angular-animate.min.js?v=1.3.13-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/lrInfiniteScroll/lrInfiniteScroll.js?v=1.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/underscore/underscore.js?v=1.7.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-tiny-scrollbar/dist/ng-tiny-scrollbar.min.js?v=0.7.3-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-focus/release/ng-oo-focus.js?v=4.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-stringsutils/release/ng-oo-stringsutils.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-convert/release/ng-oo-convert.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-i18n/release/ng-oo-i18n.js?v=4.0.0-20231113171407"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-focus/release/ng-oui-focus.js?v=4.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-loading-img/release/ng-oui-loading-img.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-tooltip/release/ng-oui-tooltip.js?v=7.1.3-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-search/release/ng-oui-search.js?v=4.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-form/release/ng-oui-form.js?v=5.0.2-20231113171407"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-router/release/ng-oo-router.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-mouseover/release/ng-oo-mouseover.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-files/release/ng-oo-files.js?v=2.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-usermenu/release/ng-oui-usermenu.js?v=5.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-button/release/ng-oui-button.js?v=4.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-auth/release/ng-oui-auth.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-router/release/ng-oui-router.js?v=4.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-onoff/release/ng-oui-onoff.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-datepicker/release/ng-oui-datepicker.js?v=3.0.2-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-basicModal/release/ng-oui-basicModal.js?v=2.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-mouseover/release/ng-oui-mouseover.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-file-icons/release/ng-oui-file-icons.js?v=3.0.0-20231113171407"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-collection/release/ng-oui-collection.js?v=6.0.1-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-dropdown-status/release/ng-oui-dropdown-status.js?v=5.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-msg/release/ng-oui-msg.js?v=5.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oui-layout/release/ng-oui-layout.js?v=6.0.2-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-vendor-paths/release/ng-oo-vendor-paths.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-config/release/ng-oo-config.js?v=3.0.0-20231114153525"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-locale/release/ng-oo-locale.js?v=3.0.1-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-searchutils/release/ng-oo-searchutils.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-http/release/ng-oo-http.js?v=3.0.1-20231011120228"></script>
+		
+		<script type="text/javascript" src="vendor/ng-oo-themes/release/ng-oo-themes.js?v=3.0.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="vendor/js-oo-polyfills/release/js-oo-polyfills.js?v=0.1.0-20231004160811"></script>
+		
+		<script type="text/javascript" src="src/app/Le-Workspace/le-workspace-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/Le-Workspace/page-designations/page-designations-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/Le-Workspace/page-expertises/page-expertises-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/Le-Workspace/page-search/page-search-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/Le-Workspace/page-statistics/page-statistics-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/app.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/auth-module.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/retrieve-cert/retrieve-cert-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/signUp/page-err/page-err-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/signUp/page-form/page-form-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/signUp/page-redirect/page-redirect-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/signUp/page-unregCertForm/page-unregCertForm-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/signUp/page-valid/page-valid-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/auth/signUp/signUp-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/create-expertise/create-expertise-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/create-notification/create-notification-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/dashboard/dashboard-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/administration/add-lawyer-to-parties/add-lawyer-to-parties-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/administration/add-party-member/add-party-member-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/administration/add-sapitor/add-sapitor-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/administration/administration-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/administration/confirm-status/confirm-status-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/administration/create-party/create-party-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/administration/update-taxation/update-taxation-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/contradictory/contradictory-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/contradictory/contradictory-details/contradictory-details-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/cost-tracking/bill-summary/bill-summary-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/cost-tracking/cost-tracking-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/expertise-details.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/safe/folder-modal/folder-modal-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/safe/safe-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/search/search-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/expertise-details/share/share-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/notification-details/notification-details-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/notification-reply/notification-reply-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/personal-info/personal-info-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/user-form/user-form-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/users-directory/avengers-directory/avengers-directory-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/users-directory/experts-directory/experts-directory-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/users-directory/lawyers-directory/lawyers-directory-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/app/users-directory/users-directory-controller.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/bytes-filter/bytes-filter.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/avenger/avenger-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/court/court-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/designation/designation-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/expert/expert-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/expert/sapitor-decorator-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/expertise/expertise-decorator-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/expertise/expertise-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/expertise/item-decorator-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/expertise/party-decorator-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/lawyer/lawyer-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/me/me-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/model-factory.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/party/party-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/party/springbreaker-decorator-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/specialty/specialty-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/models/termsofuse/termsofuse-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/oo-highlight/oo-highlight-filter.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/oo-ngenter-directive/oo-ngenter-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/oo-pagify/oo-pagify-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/oo-role-security/oo-role-security.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/oo-tabs-directive/oo-tabs-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-browse/_module.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-browse/op-browse-count-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-browse/op-browse-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-browse/op-browse.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-collapse/op-collapse-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-country-list/country-list-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-dateTimeFormat/op-dateTimeFormat-filter.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-form-toggle-disable/op-form-toggle-disable-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-list-selection/op-list-selection-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-scrollbar/op-scrollbar-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-search-directive/op-search-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-upload-directive/_module.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-upload-directive/op-upload-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-upload-directive/op-upload-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-upload-directive/op-upload.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-validator-item-name-directive/op-validator-item-name-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/op-validator-mail-directive/op-validator-mail-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/template/op-notification-form-directive/op-notification-form-directive.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/underscore/mixin.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="src/common/underscore/underscore-service.js?v=2.15.19-20231115115607"></script>
+		
+		<script type="text/javascript" src="templates.js?v=2.15.19-20231115115607"></script>
+		
+
+		
+		
+
+		
+			<script type="text/javascript">
+				
+					document.write('<script src="i18n/opalexe-front-i18n_'+APP_REMOTE_CONFIG.lang+'.js?v=2.15.19" ></' + 'script>');
+				
+					document.write('<script src="i18n/opalexe-front-i18n-vendor_'+APP_REMOTE_CONFIG.lang+'.js?v=2.15.19" ></' + 'script>');
+				
+			</script>
+		
+
+		
+		<!--[if lte IE 9]><script type="text/javascript">$(function () {document.body.className = (document.body.className ? (document.body.className+" ") : "") + "ie9";});</script><![endif]-->
+
+		<script type="text/javascript">
+			
+
+			angular.module('_mainApp', ["oo.i18n","oui.auth","oui.router","oui.layout","oo.vendorpaths","oo.config","oo.locale","oo.http","oo.themes","templates","opalexe"]);
+
+			
+			angular.module('_mainApp')
+			.config(['$i18nProvider','$ouiAuthProvider','$ouiRouterProvider','$ooVendorPathsProvider','$ooConfigProvider','$ooLocaleProvider','$ooHttpProvider','$ooThemesProvider',function($i18nProvider,$ouiAuthProvider,$ouiRouterProvider,$ooVendorPathsProvider,$ooConfigProvider,$ooLocaleProvider,$ooHttpProvider,$ooThemesProvider) {
+				
+				$i18nProvider.lang(APP_REMOTE_CONFIG.lang);
+				
+				$i18nProvider.autoLoadDictionary(true);
+				
+				$i18nProvider.addDictionaryPath("i18n/opalexe-front-i18n_%LANG%.js?v=2.15.19");
+				
+				$i18nProvider.addDictionaryPath({
+				  "file": "i18n/opalexe-front-i18n-vendor_%LANG%.js?v=2.15.19",
+				  "angular": true
+				});
+				
+				
+				
+				
+				$ouiAuthProvider.authState(APP_REMOTE_CONFIG.auth ? $ouiAuthProvider.AUTH_STATE_OK : $ouiAuthProvider.AUTH_STATE_KO);
+				
+				
+				$ouiRouterProvider.locationChange(true);
+				$ouiRouterProvider.singleWorkspace(false);
+				
+				$ooVendorPathsProvider.vendors({
+				  "js-oo-polyfills": "vendor/js-oo-polyfills",
+				  "angular": "vendor/angular",
+				  "angular-mocks": "vendor/angular-mocks",
+				  "angular-i18n": "vendor/angular-i18n",
+				  "ng-oo-i18n": "vendor/ng-oo-i18n",
+				  "ng-oo-themes": "vendor/ng-oo-themes",
+				  "ng-oo-stringsutils": "vendor/ng-oo-stringsutils",
+				  "ng-oo-http": "vendor/ng-oo-http",
+				  "ng-oo-searchutils": "vendor/ng-oo-searchutils",
+				  "ng-oo-locale": "vendor/ng-oo-locale",
+				  "ng-oo-config": "vendor/ng-oo-config",
+				  "ng-oo-vendor-paths": "vendor/ng-oo-vendor-paths",
+				  "angular-animate": "vendor/angular-animate",
+				  "jquery": "vendor/jquery",
+				  "ng-oo-convert": "vendor/ng-oo-convert",
+				  "html5-placeholder-polyfill": "vendor/html5-placeholder-polyfill",
+				  "oui-webfont": "vendor/oui-webfont",
+				  "oui-resources": "vendor/oui-resources",
+				  "ng-oui-tooltip": "vendor/ng-oui-tooltip",
+				  "ng-oui-form": "vendor/ng-oui-form",
+				  "ng-oui-onoff": "vendor/ng-oui-onoff",
+				  "ng-oo-router": "vendor/ng-oo-router",
+				  "ng-oui-router": "vendor/ng-oui-router",
+				  "ng-oui-auth": "vendor/ng-oui-auth",
+				  "ng-oui-loading-img": "vendor/ng-oui-loading-img",
+				  "ng-oui-button": "vendor/ng-oui-button",
+				  "angular-sanitize": "vendor/angular-sanitize",
+				  "ng-oui-i18n-common-terms": "vendor/ng-oui-i18n-common-terms",
+				  "ng-oo-focus": "vendor/ng-oo-focus",
+				  "ng-oui-focus": "vendor/ng-oui-focus",
+				  "ng-oui-search": "vendor/ng-oui-search",
+				  "ng-oui-usermenu": "vendor/ng-oui-usermenu",
+				  "ng-oui-layout": "vendor/ng-oui-layout",
+				  "ng-oui-msg": "vendor/ng-oui-msg",
+				  "ng-oui-dropdown-status": "vendor/ng-oui-dropdown-status",
+				  "angular-dateParser": "vendor/angular-dateParser",
+				  "lrInfiniteScroll": "vendor/lrInfiniteScroll",
+				  "ng-oui-collection": "vendor/ng-oui-collection",
+				  "opx-webfont": "vendor/opx-webfont",
+				  "ng-oo-files": "vendor/ng-oo-files",
+				  "oui-file-icons": "vendor/oui-file-icons",
+				  "ng-oui-file-icons": "vendor/ng-oui-file-icons",
+				  "ng-tiny-scrollbar": "vendor/ng-tiny-scrollbar",
+				  "ng-oo-mouseover": "vendor/ng-oo-mouseover",
+				  "ng-oui-mouseover": "vendor/ng-oui-mouseover",
+				  "underscore": "vendor/underscore",
+				  "ng-oui-basicModal": "vendor/ng-oui-basicModal",
+				  "jquery-ui": "vendor/jquery-ui",
+				  "ng-oui-datepicker": "vendor/ng-oui-datepicker",
+				  "main": "."
+				});
+				
+				
+				$ooConfigProvider.set(APP_REMOTE_CONFIG);
+				
+				
+				$ooConfigProvider.set('version', '2.15.19');
+				
+				
+				$ooLocaleProvider.defaultLang(APP_REMOTE_CONFIG.lang);
+				$ooLocaleProvider.langs(APP_REMOTE_CONFIG.langs);
+				
+				$ooHttpProvider.apiRoot('https://api.dev.opalexe.fr/rest'.match(/^\./) ? (window.location.pathname||'/').replace(/\/[^/]*$/, '/') + ('https://api.dev.opalexe.fr/rest'.length > 1 ? 'https://api.dev.opalexe.fr/rest'.substring(2) : '') : 'https://api.dev.opalexe.fr/rest');
+				
+				
+				$ooThemesProvider.defaultTheme("classic");
+				$ooThemesProvider.theme("classic");
+				
+				
+				$ooThemesProvider.themes(["classic"]);
+				
+				
+				$ooThemesProvider.themePath('resources/opalexe-front-%THEME%.css?v=2.15.19');
+				
+				
+			}]);
+			
+
+			require.config({
+				baseUrl: 'src'
+			});
+			require(['app/app'], function(){
+				angular.bootstrap(document, ['_mainApp']);
+			});
+		</script>
+
+		
+	</body>
+</html>

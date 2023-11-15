@@ -1,0 +1,6 @@
+/**
+ * ng-oo-locale - v3.0.1 - 2014-11-25
+ *
+ * Copyright (c) 2014 Oodrive
+ */
+!function(a){!function(){"use strict";a.module("oo.locale",[]).provider("$ooLocale",["$injector",function(b){function c(b){return a.isDefined(b)?void(g=b):g}var d,e="fr",f=null,g=[e];this.defaultLang=function(b){return a.isDefined(b)?void(e=b):e},this.lang=function(c){return a.isDefined(c)?(b.has("$i18nProvider")&&b.get("$i18nProvider").lang(c),void(f=c)):f},this.langs=c,this.$get=["$rootScope","$q","$injector",function(b,g,h){var i={};return i.defaultLang=function(c){return a.isDefined(c)?void(e!==c&&(e=c,b.$broadcast("$defaultLangChange",e))):e},i.lang=function(c){if(a.isDefined(c)){var i,j=g.defer();return(f||e)!==c?("undefined"==typeof d&&h.has("$i18n")&&(d=h.get("$i18n")),i=d&&d.lang(c),i?i.then(function(){f=c,j.resolve(!0),b.$broadcast("$langChange",f)},function(){j.reject()}):(f=c,j.resolve(!0),b.$broadcast("$langChange",f))):j.resolve(!1),j.promise.then(function(){})}return f||e},i.langs=c,i}]}]).run(["$rootScope","$ooLocale","$location",function(a,b,c){function d(a,d){var e=b.defaultLang();c.search("lang",d&&d!==e?d:null)}a.$on("$locationChangeSuccess",function(){var a=c.search().lang;b.lang(a||b.defaultLang())}),a.$on("$langChange",d),a.$on("$defaultLangChange",d)}])}()}(angular);
