@@ -52,7 +52,7 @@ define("app/app", ['common/oo-role-security/oo-role-security', 'common/op-scroll
   $__13;
   $__14;
   $__15;
-  angular.module('opalexe', ['oo.http', 'oo.config', 'oo.locale', 'oo.themes', 'oo-role-security', 'oo.highlight', 'oui.form', 'oui.auth', 'oui.router', 'oui.msg.modal', 'op.dashboard', 'op.leWorkspace', 'op.auth', 'op.usersDirectory', 'op.createNotification', 'op.notificationReply', 'op.expertiseDetails', 'op.scrollbar', 'op.createExpertise', 'op.userForm', 'op.retrieveCertificate', 'op.form.toggle.disable', 'op.validator.mail', 'op.validator.itemName', 'op.search', 'op.dateTimeFormat']).config(function($locationProvider, $httpProvider, $ooHttpProvider, $injector, ouiMsgErrorInterceptorProvider) {
+  angular.module('opalexe', ['app.constants', 'oo.http', 'oo.config', 'oo.locale', 'oo.themes', 'oo-role-security', 'oo.highlight', 'oui.form', 'oui.auth', 'oui.router', 'oui.msg.modal', 'op.dashboard', 'op.leWorkspace', 'op.auth', 'op.usersDirectory', 'op.createNotification', 'op.notificationReply', 'op.expertiseDetails', 'op.scrollbar', 'op.createExpertise', 'op.userForm', 'op.retrieveCertificate', 'op.form.toggle.disable', 'op.validator.mail', 'op.validator.itemName', 'op.search', 'op.dateTimeFormat']).config(function($locationProvider, $httpProvider, $ooHttpProvider, $injector, ouiMsgErrorInterceptorProvider) {
     $locationProvider.html5Mode(false);
     $locationProvider.hashPrefix('!');
     $ooHttpProvider.setup({
